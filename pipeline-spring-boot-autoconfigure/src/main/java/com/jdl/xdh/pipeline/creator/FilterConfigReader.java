@@ -1,16 +1,14 @@
 package com.jdl.xdh.pipeline.creator;
 
-import com.alibaba.fastjson2.JSON;
-import com.alibaba.fastjson2.TypeReference;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
 import com.jdl.xdh.pipeline.EventFilter;
-import com.jdl.xdh.pipeline.config.FilterProperties;
 import com.jdl.xdh.pipeline.annotation.EventFilterAnnotation;
 import com.jdl.xdh.pipeline.common.BaseEnum;
+import com.jdl.xdh.pipeline.config.FilterProperties;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
 import java.util.Arrays;

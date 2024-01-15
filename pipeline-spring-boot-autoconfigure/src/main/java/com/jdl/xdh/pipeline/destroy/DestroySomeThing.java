@@ -16,8 +16,8 @@ public class DestroySomeThing {
 
     @PreDestroy
     public void shutdown() {
-        log.info("pipelineExecutorService shutdown");
         ExecutorService pipelineExecutorService = ThreadPoolManager.getPipelineExecutorService();
+        log.info("pipelineExecutorService shutdown");
         pipelineExecutorService.shutdown();
         try {
             if (! pipelineExecutorService.awaitTermination(60, TimeUnit.SECONDS)) {

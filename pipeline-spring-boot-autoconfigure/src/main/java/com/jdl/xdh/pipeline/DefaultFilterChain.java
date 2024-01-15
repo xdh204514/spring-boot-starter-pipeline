@@ -38,7 +38,7 @@ public class DefaultFilterChain<T extends EventContext> implements EventFilterCh
                 try {
                     errorHandler.handleError(e, context);
                 } catch (Exception ex) {
-                    throw new RuntimeException(ex);
+                    throw e;
                 }
             } else {
                 throw e; // 如果没有设置错误处理器，则将异常继续抛出

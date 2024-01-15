@@ -31,7 +31,9 @@ public abstract class AbstractEventFilter<T extends EventContext> implements Eve
      */
     @Override
     public void doFilter(T context, EventFilterChain chain) {
-        handle(context);
+        if (isSupport(context)) {
+            handle(context);
+        }
         if (context.continueChain()) {
             chain.fireNext(context);
         }
@@ -44,7 +46,9 @@ public abstract class AbstractEventFilter<T extends EventContext> implements Eve
      */
     @Override
     public void doFilter(T context) {
-        handle(context);
+        if (isSupport(context)) {
+            handle(context);
+        }
     }
 
     /**
@@ -116,4 +120,12 @@ public abstract class AbstractEventFilter<T extends EventContext> implements Eve
      * @param context
      */
     protected abstract void handle(T context);
+
+    /**
+     * 是否执行该处理器
+     *
+     * @param context
+     * @return
+     */
+    protected abstract boolean isSupport(T context);
 }
