@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jdl.xdh</groupId>
     <artifactId>pipeline-spring-boot-autoconfigure</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-UAT-SNAPSHOT</version>
     <name>pipeline-spring-boot-autoconfigure</name>
     <description>pipeline-spring-boot-autoconfigure</description>
     <properties>

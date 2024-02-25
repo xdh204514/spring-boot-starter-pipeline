@@ -6,13 +6,13 @@
 
     <groupId>com.jdl.xdh</groupId>
     <artifactId>pipeline-spring-boot-starter</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-UAT-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
             <groupId>com.jdl.xdh</groupId>
             <artifactId>pipeline-spring-boot-autoconfigure</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.1-UAT-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

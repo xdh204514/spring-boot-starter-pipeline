@@ -6,6 +6,7 @@ import com.jdl.xdh.pipeline.creator.FilterConfigReader;
 import com.jdl.xdh.pipeline.creator.FilterInstantiator;
 import com.jdl.xdh.pipeline.destroy.DestroySomeThing;
 import com.jdl.xdh.pipeline.factory.FilterPipelineFactory;
+import com.jdl.xdh.pipeline.filter.DefaultEventFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
@@ -50,5 +51,10 @@ public class PipelineGenerateAutoConfiguration {
     @Bean
     public DestroySomeThing destroySomeThing(){
         return new DestroySomeThing();
+    }
+
+    @Bean
+    public DefaultEventFilter defaultEventFilter() {
+        return new DefaultEventFilter();
     }
 }
